@@ -1,0 +1,6 @@
+<spider_sit style="normal" duration="1.5"/>
+<spider_stand posture="normal" duration="1.5"/>
+I'm CoCo!
+<spider_rotate angle="90"/>
+<spider_body_lean direction="right" duration="1.0"/>
+<display_face face="happy" duration="2.0"/>

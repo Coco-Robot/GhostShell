@@ -1,0 +1,13 @@
+<spider_run_distance speed="40" amplitude="40" distance="10" />
+Step 1!
+<spider_run_distance speed="40" amplitude="40" distance="10" />
+Step 2~
+<spider_run_distance speed="40" amplitude="40" distance="10" />
+Step 3!
+<spider_run_distance speed="40" amplitude="40" distance="10" />
+Step 4~
+<spider_run_distance speed="40" amplitude="40" distance="10" />
+Step 5!
+<display_face face="happy" duration="2.0" />
+<head_act action="nod" duration="1.0" />
+I've moved forward 5 steps! Did you count along with me?

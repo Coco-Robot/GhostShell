@@ -1,0 +1,8 @@
+Oh, absolutely! 
+<display_face face="surprise" duration="1.5" />
+<shake_ears duration="1.2" /> 
+Sometimes when I dance, I imagine I’m gliding across a sparkly stage with colorful lights everywhere… or floating in space, catching shiny stars with every move! 
+<spider_wave_move speed="70" amplitude="60" times="2" />
+<display_face face="happy" duration="2.0" /> 
+Dancing can turn any place into an adventure if you let your imagination lead the way. Do you want to go on a “space dance” journey with me? Just close your eyes and picture us bouncing between the stars—zero gravity, so every move is extra floaty and fun! 
+<shake_ears duration="1.0" />

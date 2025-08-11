@@ -1,0 +1,2 @@
+<display_face face="smile" duration="3.0" />
+Hello! How are you today?

@@ -1,0 +1,5 @@
+ok
+<spider_push_up duration="10" sync="true" />
+<display_face face="smile" duration="2.0" />
+<head_act action="nod" duration="1.0" />
+I just did push-ups for 10 seconds! That was a good workout~ How did I do?

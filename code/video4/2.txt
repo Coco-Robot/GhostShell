@@ -1,0 +1,17 @@
+Oh, you want to see my favorite dance move? 
+<display_face face="surprise" duration="3.0" />
+<shake_ears duration="1.0" /> 
+I absolutely love doing this funky wave motion! 
+<play_bgm name="埃及舞" volume="80"> 
+<spider_wave_move speed="80" amplitude="70" times="3">
+Check this out - I call it my "spider groove"!
+</spider_wave_move> 
+<display_face face="wink" duration="1.0" /> 
+And then I like to add some hip shaking to really get into the rhythm! 
+<spider_shake_ass speed="70" amplitude="60" times="2" />
+<ear_swing side="left" start_angle="0" end_angle="40" speed="80" duration="1.0" /> 
+<display_face face="smile" duration="2.0" />
+Pretty smooth moves for a four-legged robot, don't you think? 
+<head_act action="nod" duration="1.0" /> 
+</play_bgm>
+Wanna dance with me?

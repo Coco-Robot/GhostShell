@@ -1,0 +1,19 @@
+Whoa!
+<display_face face="surprise" duration="1.0"/>
+Here I go!
+<spider_arm_pull direction="forward" speed="70" times="6"/>
+The water feels amazing!
+<display_face face="happy" duration="2.0"/>
+<head_pose yaw="15" pitch="10"/>
+Look at all these beautiful fish!
+<spider_arm_pull direction="forward" speed="60" times="4"/>
+<display_face face="wink" duration="0.5"/>
+I'm gliding through the water like a graceful sea creature!
+<spider_wave_move speed="50" amplitude="40" times="3"/>
+Oh wow!
+<display_face face="surprise" duration="1.0"/>
+A school of dolphins!
+<spider_arm_pull direction="forward" speed="80" times="5"/>
+<head_act action="nod" duration="1.0"/>
+This underwater world is absolutely breathtaking!
+<display_face face="smile" duration="2.0"/>

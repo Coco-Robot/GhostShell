@@ -1,0 +1,8 @@
+ok 
+<spider_body_lean direction="left" duration="0.5" sync="true" />
+<spider_body_lean direction="right" duration="0.5" sync="true" />
+<spider_body_lean direction="left" duration="0.5" sync="true" />
+<spider_body_lean direction="right" duration="0.5" sync="true" />
+<spider_body_lean direction="left" duration="0.5" sync="true" />
+<spider_body_lean direction="right" duration="0.5" sync="true" />
+You Can Really Dance

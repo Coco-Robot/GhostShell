@@ -1,0 +1,4 @@
+<spider_arm_pull direction="forward" speed="70" times="2" />
+<display_face face="surprise" duration="3.0" />
+<ear_state state="opponent" duration="3.0" />
+With great power comes great responsibility!

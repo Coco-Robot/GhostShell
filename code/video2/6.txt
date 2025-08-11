@@ -1,0 +1,6 @@
+<spider_run_distance speed="60" amplitude="50" distance="40" sync="true" />
+<spider_rotate angle="120" sync="true" />
+<spider_run_distance speed="60" amplitude="50" distance="40" sync="true" />
+<spider_rotate angle="120" sync="true" />
+<spider_run_distance speed="60" amplitude="50" distance="40" sync="true" />
+<spider_rotate angle="120" sync="true" />

@@ -1,0 +1,5 @@
+<speech_role role="bay" emotion="neutral" speech_rate="-10" loudness_rate="5" />
+<display_face face="calm" duration="5.0" />
+<ear_state state="inquisitive" duration="5.0" />
+<spider_stand posture="normal" duration="4.0" />
+Hello, I am Baymax, your personal healthcare companion. If you are feeling unwell, I will always be here to help you. Please let me know how I can assist you today.
