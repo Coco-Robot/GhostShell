@@ -1,0 +1,7 @@
+Hahaha!
+<emotion emo="happy" duration="3.0"/>
+<spider_wave_move speed="80" amplitude="70" times="4"/>
+Thank you! I really appreciate your feedback!
+<spider_shake_ass speed="90" amplitude="60" times="3"/>
+<display_face face="very_fear" duration="0.5"/>
+<display_face face="happy" duration="2.0"/>

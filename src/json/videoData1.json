@@ -1,0 +1,46 @@
+{
+    "name":"Facial Expressions and Language",
+    "options":[
+        {
+            "key":1,
+            "name":"1) Say 'hello' and then give me a smile!",
+            "time": 0
+        },
+        {
+            "key":2,
+            "name":"2) Give me a smile and say 'hello' in sync!",
+            "time": 4
+        },
+        {
+            "key":3,
+            "name":"3) Can you channel your inner Baymax and say something while mimicking his gentle expressions and voice?",
+            "time": 8
+        },
+        {
+            "key":4,
+            "name":"4) Let’s do some Spider-Man cosplay. Perform a signature Spider Man gesture with your body, while saying a classic quote from Spider Man at the same time.",
+            "time": 22
+        },
+        {
+            "key":5,
+            "name":"5) Picture this: Spider-Man just landed right in front of you. How would a true fan react? Don’t just tell me—show me! Use your face and body to express that sheer excitement!",
+            "time": 27
+        },
+        {
+            "key":6,
+            "name":"6) Here's how to react when someone compliments you: Laugh with exaggerated expressions, use bold body language, and enthusiastically shout: \"Thank you! I really appreciate your feedback.\" ",
+            "time": 37
+        },
+        {
+            "key":7,
+            "name":"7) Imagine you're diving into the open sea! Act out your swimming style, and don’t forget the facial reactions.",
+            "time": 47
+        },
+        {
+            "key":8,
+            "name":"8) You are awesome! 'Thank you! I really appreciate your feedback.'",
+            "time": 67
+        }
+    ],
+    "videoName":"./videos/Facial expressions and body language.webm"
+}

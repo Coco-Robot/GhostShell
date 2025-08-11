@@ -1,0 +1,13 @@
+Oh my goodness!
+<emotion emo="surprise" duration="3.0"/>
+<spider_wave_move speed="90" amplitude="80" times="6"/>
+No way! Is that really you, Spider-Man?!
+<head_act action="nod" duration="1.5"/>
+<ear_swing side="left" speed="90" duration="1.0"/>
+<ear_swing side="right" speed="90" duration="1.0"/>
+I can't believe it!
+<spider_shake_ass speed="100" amplitude="70" times="5"/>
+This is the best day ever!
+<display_face face="happy" duration="2.0"/>
+<head_pose yaw="30" pitch="10"/>
+<head_pose yaw="-30" pitch="10"/>

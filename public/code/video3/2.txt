@@ -1,0 +1,11 @@
+<SAVE name="You Can Really Dance" description="左右耸肩三次后说'You Can Really Dance'并伴随动作">
+<spider_body_lean direction="left" duration="0.5" sync="true" />
+<spider_body_lean direction="right" duration="0.5" sync="true" />
+<spider_body_lean direction="left" duration="0.5" sync="true" />
+<spider_body_lean direction="right" duration="0.5" sync="true" />
+<spider_body_lean direction="left" duration="0.5" sync="true" />
+<spider_body_lean direction="right" duration="0.5" sync="true" />
+You Can Really Dance
+</SAVE>
+Got it! I've memorized this dance routine as "You Can Really Dance"~ Next time you say the name, I'll perform it right away! 
+<ear_swing side="left" speed="80" duration="0.5" /><ear_swing side="right" speed="80" duration="0.5" />

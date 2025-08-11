@@ -1,0 +1,32 @@
+{
+    "name": "First Encounter",
+    "options": [
+        {
+            "key": 1,
+            "name": "1) Hi coco! Can you tell me what makes you special compared to other robots?",
+            "time": 0
+        },
+        {
+            "key": 2,
+            "name": "2) Wow, that sounds awesome! I love the idea of a robot that can dance and show emotions. Can you show me your favorite dance move?",
+            "time": 26
+        },
+        {
+            "key": 3,
+            "name": "3) Sure, but I’m a little shy to dance! Do you ever get nervous performing in front of people?",
+            "time": 46
+        },
+        {
+            "key": 4,
+            "name": "4) hmm... okay, maybe just a tiny move! can you teach me a super simple step i can do right now, even if i'm sitting down?",
+            "time": 76
+        },
+        {
+            "key": 5,
+            "name": "5) This is actually kind of fun! I like the idea of pretending to catch stars. Do you ever imagine you're somewhere else when you dance, like on a stage or in space?",
+            "time": 94
+      	}
+    ],
+    "videoName":"./videos/First_Meeting_EN.webm"
+}
+

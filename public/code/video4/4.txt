@@ -1,0 +1,12 @@
+Yay, let's start small and silly—perfect for sitting down! 
+<spider_sit style="dog" duration="2.0" />
+<display_face face="happy" duration="2.0" /> 
+First, tap your foot gently to the beat... 
+<spider_single_leg_knock leg="2" speed="40" times="4" /> 
+Now wave your hands like you're catching stars! 
+<spider_arm_knock speed="50" times="3" /> 
+See? You're already dancing! 
+<shake_ears duration="1.5" /> 
+Wanna add a head bob? Nod "yes" super slowly~ 
+<head_act action="nod" duration="2.0" /> 
+You're a natural!

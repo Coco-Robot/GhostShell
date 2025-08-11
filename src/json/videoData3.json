@@ -1,0 +1,52 @@
+{
+    "name": "Save Skills and Nest Them",
+    "options": [
+        {
+            "key": 1,
+            "name": "1) Now please shrug to the left, then shrug to the right, repeat this three times in total, and finally say \"You Can Really Dance\".",
+            "time": 0
+        },
+        {
+            "key": 2,
+            "name": "2) Remember, this set of action is called \"You Can Really Dance\".",
+            "time": 7
+        },
+        {
+            "key": 3,
+            "name": "3) Now performing: \"You Can Really Dance\".",
+            "time": 19
+        },
+        {
+            "key": 4,
+            "name": "4) Perform \"You Can Really Dance\" twice in a row.",
+            "time": 26
+        },
+        {
+            "key": 5,
+            "name": "5) Save this series of actions as \"You Can Really Dance twice\".",
+            "time": 38
+        },
+        {
+            "key": 6,
+            "name": "6) Now performing: \"You Can Really Dance twice\".",
+            "time": 45
+        },
+        {
+            "key": 7,
+            "name": "7) Now please shrug to the left, then shrug to the right, repeat this two times in total, then wave your body 2 times, and finally say, \"What a coincidence!\".",
+            "time": 57
+        },
+        {
+            "key": 8,
+            "name": "8) Save this set of actions and overwrite the original as \"You Can Really Dance\".",
+            "time": 67
+        },
+        {
+            "key": 9,
+            "name": "9) Now performing: \"You Can Really Dance twice\".",
+            "time": 75
+        }
+    ],
+    "videoName": "./videos/Memory_Nesting.webm"
+}
+

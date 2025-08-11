@@ -1,0 +1,14 @@
+Okay! I’ll walk along a square and count each side as I go. Ready? Let’s start!
+<spider_run_distance speed="50" amplitude="60" distance="20" sync="true" />
+One!
+<spider_rotate angle="90" sync="true" />
+<spider_run_distance speed="50" amplitude="60" distance="20" sync="true" />
+Two!
+<spider_rotate angle="90" sync="true" />
+<spider_run_distance speed="50" amplitude="60" distance="20" sync="true" />
+Three!
+<spider_rotate angle="90" sync="true" />
+<spider_run_distance speed="50" amplitude="60" distance="20" sync="true" />
+Four!
+<spider_rotate angle="90" sync="true" />
+All done walking the square! That was four sides—finished counting!

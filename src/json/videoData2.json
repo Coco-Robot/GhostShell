@@ -1,0 +1,41 @@
+{
+    "name":"Spatial Mobility and Human-robot Interaction",
+    "options":[
+        {
+            "key":1,
+            "name":"1) Wave your body 5 times in place, then make a happy expression.",
+            "time": 0
+        },
+        {
+            "key":2,
+            "name":"2) Do push-ups for 10 seconds and let me know after you finish.",
+            "time": 10
+        },
+        {
+            "key":3,
+            "name":"3) Can you introduce 3 actions you can do? During the introduction of each action, perform the action you are describing.",
+            "time": 27
+        },
+        {
+            "key":4,
+            "name":"4) Take 5 forward steps. While taking each step, say its corresponding number aloud (e.g., say '1' while stepping the first time, '2' while stepping the second time).",
+            "time": 66
+        },
+        {
+            "key":5,
+            "name":"5) Now you can sit down first, then stand up, then say you are CoCo, then rotate 90 degrees to the left, then shrugged to the right, and make a happy expression at the same time.",
+            "time": 80
+        },
+        {
+            "key":6,
+            "name":"6) Walk along a triangle.",
+            "time": 88
+        },
+        {
+            "key":7,
+            "name":"7) While walking along a square with a side length of 20 cm, Keep counting. Stop counting when you finish walking.",
+            "time": 117
+        }
+    ],
+    "videoName":"./videos/SpatialMovement_Expression_Language.webm"
+}

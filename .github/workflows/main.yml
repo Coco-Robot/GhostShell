@@ -1,0 +1,57 @@
+name: CI Github Pages
+on:
+  #监听push操作
+  push:
+    branches:
+      - main # 这里只配置了main分支，所以只有推送main分支才会触发以下任务
+jobs:
+  # 任务ID
+  build-and-deploy:
+    # 运行环境
+    runs-on: ubuntu-latest
+    # 步骤
+    steps:
+
+      # 官方action，将代码拉取到虚拟机
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install and Build   # 安装依赖、打包，如果提前已打包好无需这一步
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy   # 部署
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: gh-pages # 部署后提交到那个分支
+          folder: dist # 这里填打包好的目录名称
+
+      # - name: Test   # 测试自动发邮件服务
+      #   run: 
+      #     echo ${{ secrets.EMAIL_USERNAME }}
+
+      #     # 步骤3: 发送邮件通知
+      # - name: 发送构建部署结果邮件
+      #   if: success()
+      #   uses: dawidd6/action-send-mail@v3
+      #   with:
+      #     # SMTP服务器配置 (以Gmail为例)
+      #     server_address: smtp.gmail.com
+      #     server_port: 465
+      #     # 发件人信息 - 使用GitHub Secrets存储敏感信息
+      #     username: ${{ secrets.EMAIL_USERNAME }}
+      #     password: ${{ secrets.EMAIL_PASSWORD }}
+      #     subject: GitHub Actions 构建部署通知 - ${{ github.repository }}
+      #     # 收件人邮箱，可以是多个，用逗号分隔
+      #     to: my@coco-project.com
+      #     # 发件人邮箱
+      #     from: GitHub Actions
+      #     # 邮件内容
+      #     body: |
+      #       项目 ${{ github.repository }} 的构建部署已完成！
+            
+      #       触发事件: ${{ github.event_name }}
+      #       提交作者: ${{ github.actor }}
+      #       提交信息: ${{ github.event.head_commit.message }}
+      #       工作流链接: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

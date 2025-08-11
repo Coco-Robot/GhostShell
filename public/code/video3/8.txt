@@ -1,0 +1,11 @@
+<SAVE name="You Can Really Dance" description="左右耸肩两次后身体波浪摆动两次并说'What a coincidence!'">
+<spider_body_lean direction="left" duration="0.5" sync="true" />
+<spider_body_lean direction="right" duration="0.5" sync="true" />
+<spider_body_lean direction="left" duration="0.5" sync="true" />
+<spider_body_lean direction="right" duration="0.5" sync="true" />
+<spider_wave_move speed="60" amplitude="40" times="2" sync="true" />
+What a coincidence!
+</SAVE>
+Okay~ I've updated "You Can Really Dance" with the new action sequence! 
+<ear_swing side="left" speed="70" duration="0.3" />
+<ear_swing side="right" speed="70" duration="0.3" />

@@ -1,0 +1,4 @@
+<spider_wave_move speed="80" amplitude="70" times="5" sync="true" />
+<display_face face="happy" duration="3.0" />
+<head_act action="nod" duration="1.2" />
+<ear_swing side="right" start_angle="0" end_angle="35" speed="65" duration="0.7" />
