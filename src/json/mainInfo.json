@@ -3,71 +3,79 @@
     "authorList":[
         {
             "name": "Jian Gong",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Gong,+J"
         },
         {
             "name": "Youwei Huang",
-            "url": "https://github.com/devilyouwei"
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Huang,+Y"
         },
         {
             "name": "Bo Yuan",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Yuan,+B"
         },
         {
             "name": "Ming Zhu",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Zhu,+M"
+        },
+        {
+            "name": "Zhou Liao",
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Liao,+Z"
+        },
+        {
+            "name": "Jianhang Liang",
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Liang,+J"
         },
         {
             "name": "Juncheng Zhan",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Zhan,+J"
         },
         {
             "name": "Jinke Wang",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Wang,+J"
         },
         {
             "name": "Hang Shu",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Shu,+H"
         },
         {
             "name": "Mingyue Xiong",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Xiong,+M"
         },
         {
             "name": "Yanjun Ye",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Ye,+Y"
         },
         {
             "name": "Yufan Zu",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Zu,+Y"
         },
         {
             "name": "Yang Zhou",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Zhou,+Y"
         },
         {
             "name": "Yihan Ding",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Ding,+Y"
         },
         {
             "name": "Xuannian Chen",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Chen,+X"
         },
         {
             "name": "Xingyu Lu",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Lu,+X"
         },
         {
             "name": "Runjie Ban",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Ban,+R"
         },
         {
             "name": "Bingchao Huang",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Huang,+B"
         },
         {
             "name": "Fusen Liu",
-            "url": ""
+            "url": "https://arxiv.org/search/cs?searchtype=author&query=Liu,+F"
         }
     ],
     "linkList":[
@@ -82,11 +90,11 @@
             "url": "https://github.com/Coco-Robot/GhostShell"
         }
     ],
-    "abstract": "We present <strong>GhostShell</strong>, a novel approach that leverages Large Language Models(LLMs) to enable streaming and concurrent behavioral programming for embodied systems. In contrast to conventional methods that rely on pre-scheduled action sequences or behavior trees, <strong>GhostShell</strong> drives embodied systems to act on-the-fly by issuing function calls incrementally as tokens are streamed from the LLM. <strong>GhostShell</strong> features a streaming XML function token parser, a dynamic function interface mapper, and a multi-channel scheduler that orchestrates intra-channel synchronous and inter-channel asynchronous function calls, thereby coordinating serial-parallel embodied actions across multiple robotic components as directed by the LLM. We evaluate <strong>GhostShell</strong> on our robot prototype COCO through comprehensive grounded experiments across 34 real-world interaction tasks and multiple LLMs. The results demonstrate that our approach achieves state-of-the-art Behavioral Correctness Metric of 0.85 with Claude-4-Sonnet and up to 66× faster response times compared to LLM native function calling APIs. <strong>GhostShell</strong> also proves effective in long-horizon multimodal tasks, demonstrating strong robustness and generalization.",
+    "abstract": "We present <strong>GhostShell</strong>, a novel approach that leverages Large Language Models (LLMs) to enable streaming and concurrent behavioral programming for embodied systems. In contrast to conventional methods that rely on pre-scheduled action sequences or behavior trees, <strong>GhostShell</strong> drives embodied systems to act on-the-fly by issuing function calls incrementally as tokens are streamed from the LLM. <strong>GhostShell</strong> features a streaming XML function token parser, a dynamic function interface mapper, and a multi-channel scheduler that orchestrates intra-channel synchronous and inter-channel asynchronous function calls, thereby coordinating serial-parallel embodied actions across multiple robotic components under LLM guidance. We evaluate <strong>GhostShell</strong> on our robotic prototype COCO through comprehensive grounded experiments across 34 real-world interaction tasks and multiple LLM backends. The results demonstrate that our approach achieves a state-of-the-art Behavioral Correctness Metric of 0.85 with Claude-4-Sonnet, and up to 66X faster response times compared to native LLM function calling APIs. <strong>GhostShell</strong> also proves effective in long-horizon multimodal tasks, exhibiting strong robustness and generalization capabilities.",
     "mainImg": "./img/framework.jpg",
     "ExperimentText1":"Below are some demonstration videos of experiments. The videos not only include actions, but also the voice and expressions of the robot.",
     "ExperimentText2":"We also place the XML commands generated by LLM at the bottom of the video. The robot completes tasks by executing these XML statements.",
     "paperUrl":"https://arxiv.org/abs/2508.05298",
-    "citationContent":"@misc{ gong2025ghostshellstreamingllmfunction,<p class='indent-8'> title={ GhostShell: Streaming LLM Function Calls for Concurrent Embodied Programming },</p> <p class='indent-8'>author={ Jian Gong and Youwei Huang and Bo Yuan and Ming Zhu and Juncheng Zhan and Jinke Wang and Hang Shu and Mingyue Xiong and Yanjun Ye and Yufan Zu and Yang Zhou and Yihan Ding and Xuannian Chen and Xingyu Lu and Runjie Ban and Bingchao Huang and Fusen Liu },</p><p class='indent-8'> year={ 2025 },</p><p class='indent-8'> eprint={ 2508.05298 },</p><p class='indent-8'> archivePrefix={ arXiv },</p> <p class='indent-8'>primaryClass={ cs.RO },</p><p class='indent-8'> url={ https://arxiv.org/abs/2508.05298 },</p>}",
+    "citationContent":"@article{gong2025ghostshell,<p class='indent-8'> title={GhostShell: Streaming LLM Function Calls for Concurrent Embodied Programming},</p> <p class='indent-8'>author={Gong, Jian and Huang, Youwei and Yuan, Bo and Zhu, Ming and Zhan, Juncheng and Wang, Jinke and Shu, Hang and Xiong, Mingyue and Ye, Yanjun and Zu, Yufan and others},</p><p class='indent-8'> journal={arXiv preprint arXiv:2508.05298},</p><p class='indent-8'> year={2025}</p>}",
     "acknowledgementsContent": "The name of our approach pays tribute to the science fiction work Ghost in the Shell by Masamune Shirow.  We appreciate all those who strive to turn science fiction into reality"
 }
