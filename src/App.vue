@@ -13,6 +13,9 @@
 			<div class="mt-4 px-4 border-l-2 border-slate-200">
 				<p class="text-base text-slate-600 leading-relaxed">{{ mainInfo.ExperimentText1 }}</p>
 				<p class="mt-2 text-base text-slate-600 leading-relaxed">{{ mainInfo.ExperimentText2 }}</p>
+				<p class="mt-3 text-sm text-indigo-700/80 leading-relaxed font-medium bg-indigo-50/50 p-3 rounded-r-lg border-l border-indigo-200">
+					<em>Instruction:</em> Please interact with the command list on the left panel to navigate through different experimental trials. Selecting a command will dynamically load the associated behavioral execution video alongside its real-time XML function token stream.
+				</p>
 			</div>
 		</div>
 
