@@ -19,7 +19,7 @@
 						<div class="custom-scrollbar h-full max-h-[360px] overflow-y-auto pr-2 flex flex-col gap-4">
 							<div v-for="(inst, idx) in item.instructions" :key="idx" 
 								class="relative bg-white p-4 rounded-xl shadow-sm border border-slate-200/60 text-sm text-slate-700 leading-relaxed text-justify">
-								<span class="font-bold text-indigo-600 block mb-1">Human Instruction {{ idx + 1 }}:</span> 
+								<span class="font-bold text-indigo-600 block mb-1">Instruction {{ idx + 1 }}:</span> 
 								{{ inst }}
 							</div>
 						</div>
@@ -27,11 +27,35 @@
 				</div>
 
 				<!-- Right Column: Video -->
-				<div class="lg:col-span-7 flex flex-col justify-center">
-					<div class="relative w-full rounded-2xl overflow-hidden shadow-inner bg-black">
-						<video v-if="isVisible" class="w-full h-auto block" preload="metadata" playsinline controls>
-							<source :src="item.videoName" type="video/mp4">
-						</video>
+				<div class="lg:col-span-7 flex flex-col justify-center gap-4">
+					
+					<!-- Model Tabs (Only show if there are multiple models) -->
+					<div v-if="videoList.length > 1" class="flex flex-wrap gap-3 mb-2">
+						<button 
+							v-for="(vid, idx) in videoList" :key="idx"
+							@click="switchModel(idx)"
+							:class="[
+								'px-5 py-2 rounded-xl text-sm font-semibold transition-all duration-300 border flex items-center gap-2',
+								activeVideoIndex === idx 
+									? 'bg-rose-50 border-rose-200 text-rose-700 shadow-sm transform scale-[1.02]' 
+									: 'bg-white border-slate-200/80 text-slate-500 hover:bg-slate-50 hover:text-slate-700 hover:border-slate-300'
+							]"
+						>
+							<div class="w-1.5 h-1.5 rounded-full" :class="activeVideoIndex === idx ? 'bg-rose-500' : 'bg-slate-300'"></div>
+							{{ vid.model }}
+						</button>
+					</div>
+
+					<div class="relative w-full rounded-2xl overflow-hidden shadow-lg bg-[#0f111a] border border-slate-200 group flex items-center justify-center relative">
+						<!-- Subtle background pattern for video container -->
+						<div class="absolute inset-0 z-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:16px_16px] opacity-50"></div>
+						
+						<!-- Video locked to a consistent 16:9 box, letterboxing applied automatically by object-contain -->
+						<div class="relative z-10 w-full aspect-video">
+							<video v-if="isVisible" ref="videoPlayer" class="absolute inset-0 w-full h-full object-contain transform group-hover:scale-[1.01] transition-transform duration-700" preload="metadata" playsinline controls>
+								<source :src="currentVideoUrl" type="video/mp4">
+							</video>
+						</div>
 					</div>
 				</div>
 				
@@ -41,14 +65,36 @@
 </template>
 
 <script setup>
-import { ref, onMounted, defineProps } from 'vue'
+import { ref, onMounted, defineProps, computed, nextTick } from 'vue'
 
-defineProps({
+const props = defineProps({
 	item: Object
 })
 
 const rootRef = ref(null)
 const isVisible = ref(false)
+const videoPlayer = ref(null)
+
+// Normalize video source(s)
+const videoList = computed(() => {
+	if (props.item.videos && Array.isArray(props.item.videos)) {
+		return props.item.videos;
+	}
+	return [{ model: 'Default', url: props.item.videoName }];
+})
+
+const activeVideoIndex = ref(0)
+const currentVideoUrl = computed(() => videoList.value[activeVideoIndex.value]?.url)
+
+const switchModel = async (index) => {
+	if (activeVideoIndex.value === index) return;
+	activeVideoIndex.value = index;
+	await nextTick();
+	if (videoPlayer.value) {
+		videoPlayer.value.load();
+		videoPlayer.value.play().catch(e => console.log('Auto-play prevented:', e));
+	}
+}
 
 onMounted(() => {
 	const observer = new IntersectionObserver((entries) => {
