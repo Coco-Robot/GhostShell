@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import 'highlight.js/styles/stackoverflow-light.css'
+import 'highlight.js/styles/atom-one-dark.min.css' // 更改为深色代码主题
 import hljs from "highlight.js/lib/core";
 import hljsVuePlugin from "@highlightjs/vue-plugin";
 import xml from "highlight.js/lib/languages/xml";

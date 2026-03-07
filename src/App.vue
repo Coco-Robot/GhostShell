@@ -13,7 +13,7 @@
 
 
 		<!-- mainInfo.json -->
-		<CitationComp />
+		<!-- <CitationComp /> -->
 	</div>
 </template>
 
@@ -21,7 +21,7 @@
 import AuthorInfo from './components/AuthorInfo.vue'
 import AbstractComp from './components/AbstractComp.vue'
 import CodeBox from './components/CodeBox.vue'
-import CitationComp from './components/CitationComp.vue'
+// import CitationComp from './components/CitationComp.vue'
 import json1 from './json/videoData1.json'
 import json2 from './json/videoData2.json'
 import json3 from './json/videoData3.json'

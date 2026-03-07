@@ -1,18 +1,18 @@
 <template>
   <div>
-    <div class="title text-center mt-10">
-      <p class="my-2 leading-12" style="font-weight: bolder; font-size: 2.6rem">
+    <div class="title text-center mt-12 mb-8">
+      <p class="text-base font-semibold text-rose-600 mb-4 tracking-wider uppercase">Under Review for IROS 2026</p>
+      <h1 class="text-3xl md:text-4xl font-bold text-slate-800 px-4 leading-tight tracking-tight">
         {{ mainInfo.title }}
-      </p>
+      </h1>
     </div>
-    <ul class="author-box mt-8">
+    <!-- <ul class="author-box mt-8">
       <li v-for="item in mainInfo.authorList" :key="item">
         <a v-if="item.url.trim() !== ''" :href="item.url">{{ item.name }}</a>
         <span v-else>{{ item.name }}</span>
       </li>
-    </ul>
-    <div class="w-2/5 mx-auto px-4 my-4">
-      <!--todo 此处数量变动需要再改样式 -->
+    </ul> -->
+    <!-- <div class="w-2/5 mx-auto px-4 my-4">
       <ul class="link-box grid grid-cols-1 sm:grid-cols-2 gap-8">
         <li v-for="item in mainInfo.linkList" :key="item.name">
           <a :href="item.url">
@@ -23,7 +23,7 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </template>
 
