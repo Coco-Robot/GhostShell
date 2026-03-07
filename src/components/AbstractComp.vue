@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8">
+  <div class="mt-6">
     <div class="text-left">
       
       <div class="my-8 relative w-full rounded-2xl overflow-hidden shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] border border-gray-100/50 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] transition-shadow duration-500 bg-black/5">
