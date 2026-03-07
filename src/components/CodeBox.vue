@@ -1,5 +1,5 @@
 <template>
-	<div class="mb-12 bg-white rounded-3xl border border-slate-200/60 shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md">
+	<div ref="rootRef" class="mb-12 bg-white rounded-3xl border border-slate-200/60 shadow-sm overflow-hidden transition-all duration-1000 transform" :class="isVisible ? 'opacity-100 translate-y-0 hover:shadow-md' : 'opacity-0 translate-y-12'">
 		<!-- Header -->
 		<div class="px-6 py-5 bg-gradient-to-r from-slate-50 to-white border-b border-slate-100">
 			<h5 class="text-xl font-bold text-slate-800 tracking-tight flex items-center gap-2">
@@ -15,8 +15,8 @@
 				<div class="lg:col-span-7 flex flex-col gap-6">
 					
 					<!-- Video Player -->
-					<div class="relative w-full rounded-2xl overflow-hidden shadow-inner bg-black">
-						<video ref="videoPlayer" class="w-full h-auto block" preload="metadata" playsinline controls>
+					<div class="relative w-full rounded-2xl overflow-hidden shadow-inner bg-black min-h-[200px] md:min-h-[300px]">
+						<video v-if="isVisible" ref="videoPlayer" class="w-full h-auto block" preload="metadata" playsinline controls>
 							<source :src="json.videoName" type="video/mp4">
 						</video>
 					</div>
@@ -68,8 +68,10 @@
 </template>
 
 <script setup>
-import { ref, defineProps, onMounted } from 'vue'
+import { ref, defineProps, onMounted, nextTick } from 'vue'
 
+const rootRef = ref(null)
+const isVisible = ref(false)
 const videoPlayer = ref(null)
 const activeIndex = ref(1)
 const code = ref('')
@@ -77,17 +79,31 @@ const props = defineProps({
 	json: Object,
 	index: Number
 })
+
 onMounted(() => {
 	getCode()
+
+	const observer = new IntersectionObserver((entries) => {
+		if (entries[0].isIntersecting) {
+			isVisible.value = true;
+			observer.disconnect();
+		}
+	}, { rootMargin: '200px' })
+	
+	if (rootRef.value) {
+		observer.observe(rootRef.value)
+	}
 })
+
 const getCode = () => {
 	loadTxtFile(`./code/video${props.index}/${activeIndex.value}.txt`, function (data) {
 		code.value = data
 	});
 }
-const handleSelectChange = (val) => {
+const handleSelectChange = async (val) => {
 	const timePoint = props.json.options[val - 1].time
 	activeIndex.value = val
+	await nextTick()
 	if (videoPlayer.value) {
 		videoPlayer.value.currentTime = timePoint
 		videoPlayer.value.play()
