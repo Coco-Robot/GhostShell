@@ -15,7 +15,7 @@
 				<div class="lg:col-span-7 flex flex-col gap-6">
 					
 					<!-- Video Player -->
-					<div class="relative w-full rounded-2xl overflow-hidden shadow-inner bg-black min-h-[200px] md:min-h-[300px]">
+					<div class="relative w-full rounded-2xl overflow-hidden shadow-inner bg-black">
 						<video v-if="isVisible" ref="videoPlayer" class="w-full h-auto block" preload="metadata" playsinline controls>
 							<source :src="json.videoName" type="video/mp4">
 						</video>
@@ -56,7 +56,7 @@
 						</div>
 						
 						<!-- Code Content -->
-						<div class="p-4 overflow-y-auto max-h-[400px] custom-scrollbar-dark text-sm text-slate-300">
+						<div class="p-4 overflow-y-auto max-h-[400px] custom-scrollbar-dark text-sm text-slate-300 text-left">
 							<highlightjs class="code-container font-mono" language="xml" :code="code"></highlightjs>
 						</div>
 					</div>
@@ -164,5 +164,6 @@ pre code.hljs {
 	width: 100%;
     white-space: pre-wrap;
     word-wrap: break-word;
+	text-align: left;
 }
 </style>

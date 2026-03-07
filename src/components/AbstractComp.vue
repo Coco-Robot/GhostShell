@@ -17,10 +17,21 @@
       </div>
 
       <!-- Abstract & Framework combined block -->
-      <div class="flex flex-col gap-4 p-6 md:p-8 lg:p-10 bg-gradient-to-br from-slate-50 to-white rounded-3xl border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-        <p class="abstract-text text-base md:text-lg leading-relaxed text-slate-700 text-justify" v-html="mainInfo.abstract"></p>
-        <div class="w-full relative mt-2 rounded-xl overflow-hidden bg-white/50 p-2">
-          <img :src="mainInfo.mainImg" class="w-full h-auto object-contain rounded-lg drop-shadow-sm" alt="Framework Architecture" />
+      <div class="flex flex-col gap-6 p-8 md:p-12 lg:p-14 bg-[#fdfdfc] rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-slate-200/80 mt-10">
+        <!-- Abstract Section -->
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 inline-block">Abstract</h2>
+          <p class="abstract-text text-base md:text-lg leading-relaxed text-slate-700 text-justify" v-html="mainInfo.abstract"></p>
+        </div>
+        
+        <div class="w-full h-px bg-slate-200/60 my-2"></div>
+
+        <!-- Architecture Section -->
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 inline-block">Methodology</h2>
+          <div class="w-full relative mt-4">
+            <img :src="mainInfo.mainImg" class="w-full h-auto object-contain drop-shadow" alt="Framework Architecture" />
+          </div>
         </div>
       </div>
     </div>
@@ -54,6 +65,6 @@ onMounted(() => {
   text-align: justify;
 }
 .abstract-text strong {
-  font-weight: bolder;
+  font-weight: bold;
 }
 </style>

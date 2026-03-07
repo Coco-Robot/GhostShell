@@ -13,14 +13,12 @@
 				
 				<!-- Left Column: Context / Instructions -->
 				<div class="lg:col-span-5 flex flex-col">
-					<p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">Context & Instructions</p>
+					<p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">Instructions</p>
 					
 					<div class="flex-1 rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 p-4">
 						<div class="custom-scrollbar h-full max-h-[360px] overflow-y-auto pr-2 flex flex-col gap-4">
 							<div v-for="(inst, idx) in item.instructions" :key="idx" 
 								class="relative bg-white p-4 rounded-xl shadow-sm border border-slate-200/60 text-sm text-slate-700 leading-relaxed text-justify">
-                                <!-- Chat bubble indicator -->
-                                <div class="absolute -left-1.5 top-4 w-3 h-3 bg-indigo-100 rounded-full border border-white shadow-sm z-10"></div>
 								<span class="font-bold text-indigo-600 block mb-1">Human Instruction {{ idx + 1 }}:</span> 
 								{{ inst }}
 							</div>
@@ -30,7 +28,7 @@
 
 				<!-- Right Column: Video -->
 				<div class="lg:col-span-7 flex flex-col justify-center">
-					<div class="relative w-full rounded-2xl overflow-hidden shadow-inner bg-black min-h-[200px] md:min-h-[300px]">
+					<div class="relative w-full rounded-2xl overflow-hidden shadow-inner bg-black">
 						<video v-if="isVisible" class="w-full h-auto block" preload="metadata" playsinline controls>
 							<source :src="item.videoName" type="video/mp4">
 						</video>
