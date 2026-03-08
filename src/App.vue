@@ -5,12 +5,12 @@
 		<AbstractComp />
 
 		<!-- Selected Real-World Demonstrations (Move from AbstractComp here) -->
-		<div class="mt-20 mb-8 text-left break-all">
+		<div class="mt-10 md:mt-20 mb-6 md:mb-8 text-left break-all">
 			<h3 class="text-2xl md:text-3xl font-bold text-slate-800 tracking-tight flex items-center gap-3">
 				<span class="w-1.5 h-6 bg-indigo-500 rounded-full inline-block"></span>
 				Selected Real-World Demonstrations
 			</h3>
-			<div class="mt-4 px-4 border-l-2 border-slate-200">
+			<div class="mt-4 md:px-4 border-l-2 border-slate-200">
 				<p class="text-base text-slate-600 leading-relaxed">{{ mainInfo.ExperimentText1 }}</p>
 				<p class="mt-2 text-base text-slate-600 leading-relaxed">{{ mainInfo.ExperimentText2 }}</p>
 				<p class="mt-3 text-sm text-indigo-700/80 leading-relaxed font-medium bg-indigo-50/50 p-3 rounded-r-lg border-l border-indigo-200">
@@ -26,12 +26,12 @@
 		<CodeBox :index="4" :json="json4" />
 
 		<!-- Extra Bloopers / Testing Videos -->
-		<div class="mt-20 mb-8 text-left break-all">
+		<div class="mt-10 md:mt-20 mb-6 md:mb-8 text-left break-all">
 			<h3 class="text-2xl md:text-3xl font-bold text-slate-800 tracking-tight flex items-center gap-3">
 				<span class="w-1.5 h-6 bg-rose-500 rounded-full inline-block"></span>
 				Behind the Scenes: Informal Experiments & Outtakes
 			</h3>
-			<p class="mt-4 px-4 border-l-2 border-slate-200 text-base text-slate-600 leading-relaxed">
+			<p class="mt-4 md:px-4 border-l-2 border-slate-200 text-base text-slate-600 leading-relaxed">
 				Below are some unscripted informal experiments, bloopers, and prompt-engineering sequences recorded during our development process. For formal experimental designs and quantitative results, please refer to our paper.
 			</p>
 		</div>
@@ -59,27 +59,15 @@ import extraVideos from './json/extraVideos.json'
 
 <style scoped>
 .container {
-	width: 96%;
+	/* Fluid width: full on mobile, capped at 960px on desktop */
+	width: min(94%, 960px);
+	margin-inline: auto;
 	font-family: Avenir, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	text-align: center;
 	color: #212529;
-}
-@media (min-width: 576px) {
-	.container {
-		max-width: 540px;
-	}
-}
-@media (min-width: 768px) {
-	.container {
-		
-		max-width: 720px;
-	}
-}
-@media (min-width: 992px) {
-	.container {
-		max-width: 960px;
-	}
+	/* Enable container queries for child components */
+	container-type: inline-size;
+	container-name: main;
 }
 </style>

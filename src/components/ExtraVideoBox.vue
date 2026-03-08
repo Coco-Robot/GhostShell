@@ -1,14 +1,14 @@
 <template>
 	<div ref="rootRef" class="mb-12 bg-white rounded-3xl border border-slate-200/60 shadow-sm overflow-hidden transition-all duration-1000 transform" :class="isVisible ? 'opacity-100 translate-y-0 hover:shadow-md' : 'opacity-0 translate-y-12'">
 		<!-- Header -->
-		<div class="px-6 py-5 bg-gradient-to-r from-slate-50 to-white border-b border-slate-100">
+		<div class="px-3 py-3 md:px-6 md:py-5 bg-gradient-to-r from-slate-50 to-white border-b border-slate-100">
 			<h5 class="text-xl font-bold text-slate-800 tracking-tight flex items-center gap-2">
 				<span class="w-1.5 h-6 bg-rose-500 rounded-full inline-block"></span>
 				{{ item.title }}
 			</h5>
 		</div>
 		
-		<div class="p-6 md:p-8">
+		<div class="p-3 md:p-6 lg:p-8">
 			<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 				
 				<!-- Left Column: Context / Instructions -->

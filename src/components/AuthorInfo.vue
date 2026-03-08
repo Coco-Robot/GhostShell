@@ -2,7 +2,7 @@
   <div>
     <div class="title text-center mt-6 mb-6">
       <p class="text-base font-semibold text-rose-600 mb-4 tracking-wider uppercase">Under Review for IROS 2026</p>
-      <h1 class="text-3xl md:text-4xl font-bold text-slate-800 px-4 leading-tight tracking-tight">
+      <h1 class="text-2xl md:text-4xl font-bold text-slate-800 px-4 leading-tight tracking-tight">
         {{ mainInfo.title }}
       </h1>
     </div>

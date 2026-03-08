@@ -50,3 +50,67 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* ============================================================
+   Fluid Typography System
+   CSS3 modern features: clamp(), custom properties, text-wrap
+   ============================================================ */
+
+/*
+ * Fluid base font-size on html.
+ * Since Tailwind uses rem, ALL text-* classes scale automatically.
+ *
+ * Scale: 14px @ 375px viewport  →  17px @ 1440px viewport
+ * Formula: clamp(14px, 12.8px + 0.32vw, 17px)
+ *   @ 375px  → 12.8 + 0.32 * 3.75  = 14.0px ✓
+ *   @ 768px  → 12.8 + 0.32 * 7.68  = 15.3px ✓
+ *   @ 1280px → 12.8 + 0.32 * 12.8  = 16.9px ✓
+ *   @ 1440px → 12.8 + 0.32 * 14.4  = 17.4px → capped at 17px ✓
+ */
+html {
+	font-size: clamp(14px, 12.8px + 0.32vw, 17px);
+}
+
+:root {
+	/* ── Fluid type scale (usable via var() in non-Tailwind contexts) ── */
+	--text-xs:   clamp(0.65rem,  0.625rem + 0.1vw,  0.75rem);
+	--text-sm:   clamp(0.78rem,  0.76rem  + 0.1vw,  0.875rem);
+	--text-base: clamp(0.9rem,   0.88rem  + 0.1vw,  1rem);
+	--text-lg:   clamp(1rem,     0.975rem + 0.14vw, 1.125rem);
+	--text-xl:   clamp(1.05rem,  1rem     + 0.2vw,  1.25rem);
+	--text-2xl:  clamp(1.2rem,   1.1rem   + 0.4vw,  1.5rem);
+	--text-3xl:  clamp(1.35rem,  1.2rem   + 0.6vw,  1.875rem);
+	--text-4xl:  clamp(1.6rem,   1.35rem  + 0.95vw, 2.25rem);
+	--text-5xl:  clamp(2rem,     1.6rem   + 1.5vw,  3rem);
+
+	/* ── Fluid spacing scale ── */
+	--space-xs:  clamp(0.25rem, 0.2rem  + 0.2vw, 0.5rem);
+	--space-sm:  clamp(0.5rem,  0.4rem  + 0.35vw, 0.75rem);
+	--space-md:  clamp(1rem,    0.85rem + 0.5vw,  1.5rem);
+	--space-lg:  clamp(1.5rem,  1.2rem  + 0.9vw,  2.5rem);
+	--space-xl:  clamp(2rem,    1.5rem  + 1.5vw,  4rem);
+
+	/* ── Line-height tokens ── */
+	--leading-tight:   1.25;
+	--leading-snug:    1.375;
+	--leading-normal:  1.5;
+	--leading-relaxed: 1.625;
+
+	/* ── Fluid container padding ── */
+	--container-px: clamp(1rem, 3vw, 3rem);
+}
+
+/* Balance headings & prevent orphans */
+h1, h2, h3, h4, h5, h6 {
+	text-wrap: balance;
+}
+
+/* Improve paragraph readability */
+p {
+	text-wrap: pretty;
+	line-height: var(--leading-relaxed);
+}
+
+/* Fluid gap/padding helpers (opt-in via class) */
+.fluid-px  { padding-inline: var(--container-px); }
+.fluid-gap { gap: var(--space-md); }
