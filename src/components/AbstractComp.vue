@@ -23,25 +23,25 @@
 
       <!-- Abstract & Framework combined block -->
       <div
-        class="flex flex-col gap-6 p-4 md:p-10 lg:p-14 bg-[#fdfdfc] rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-slate-200/80 mt-10"
+        class="flex flex-col gap-4 md:gap-6 p-4 md:p-10 lg:p-14 bg-[#fdfdfc] rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] border border-slate-200/80 mt-10"
       >
         <!-- Abstract Section -->
-        <div class="space-y-4">
+        <div class="space-y-2 md:space-y-4">
           <h1
-            class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 inline-block"
+            class="text-xl md:text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 inline-block"
           >
             Abstract
           </h1>
           <p
-            class="abstract-text text-base leading-relaxed text-slate-700 text-justify"
+            class="abstract-text text-sm md:text-base leading-normal md:leading-relaxed tracking-tight md:tracking-normal text-slate-700 text-justify"
             v-html="mainInfo.abstract"
           ></p>
         </div>
 
         <!-- Architecture Section -->
-        <div class="space-y-4">
+        <div class="space-y-2 md:space-y-4">
           <h1
-            class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 inline-block"
+            class="text-xl md:text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 inline-block"
           >
             Methodology
           </h1>

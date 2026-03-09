@@ -40,7 +40,7 @@
 				</div>
 
 				<!-- Right Column: Video (Top) & Code Display (Bottom) -->
-				<div class="lg:col-span-7 flex flex-col gap-6 h-full min-h-0">
+				<div class="lg:col-span-7 flex flex-col gap-4 lg:gap-6 h-full min-h-0">
 					
 					<!-- Video Player -->
 					<div class="relative w-full rounded-2xl overflow-hidden shadow-lg bg-[#0f111a] border border-slate-200 group flex items-center justify-center shrink-0 max-h-[340px]">
@@ -53,7 +53,7 @@
 					</div>
 
 					<!-- Code Display -->
-					<div class="flex-1 rounded-2xl overflow-hidden bg-[#0f111a] shadow-inner flex flex-col border border-slate-700/50 relative min-h-0">
+					<div class="min-h-[220px] max-h-[72vw] lg:flex-1 lg:max-h-none lg:min-h-0 rounded-2xl overflow-hidden bg-[#0f111a] shadow-inner flex flex-col border border-slate-700/50 relative">
 
 						<!-- Subtle gradient on background -->
 						<div class="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -69,7 +69,7 @@
 						</div>
 
 						<!-- Code Content -->
-						<div class="flex-1 p-5 overflow-y-auto custom-scrollbar-dark text-[13px] text-slate-300 text-left relative z-10 min-h-0">
+						<div class="flex-1 p-4 lg:p-5 overflow-y-auto custom-scrollbar-dark text-[13px] text-slate-300 text-left relative z-10 min-h-0">
 							<highlightjs class="code-container font-mono" language="xml" :code="code"></highlightjs>
 						</div>
 					</div>
