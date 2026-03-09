@@ -19,9 +19,10 @@
 					</p>
 					
 					<div class="flex-1 rounded-2xl overflow-hidden bg-slate-50/80 border border-slate-100 p-2 shadow-inner flex flex-col min-h-0">
-						<div class="custom-scrollbar overflow-y-auto p-2 flex flex-col gap-3 h-full">
+						<div ref="commandListRef" class="custom-scrollbar overflow-y-auto p-2 flex flex-col gap-3 h-full">
 							<button 
 								v-for="option in json.options" :key="option.key"
+								:ref="el => { if (el) buttonRefs[option.key - 1] = el }"
 								@click="handleSelectChange(option.key)" 
 								:title="option.name"
 								:class="[
@@ -46,7 +47,7 @@
 					<div class="relative w-full rounded-2xl overflow-hidden shadow-lg bg-[#0f111a] border border-slate-200 group flex items-center justify-center shrink-0 max-h-[340px]">
 						<div class="absolute inset-0 z-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:16px_16px] opacity-50"></div>
 						<div class="relative z-10 w-full flex items-center justify-center h-full">
-							<video v-if="isVisible" ref="videoPlayer" class="w-full h-full max-h-[340px] block object-contain transform group-hover:scale-[1.01] transition-transform duration-700 mx-auto" preload="metadata" playsinline controls>
+							<video v-if="isVisible" ref="videoPlayer" @timeupdate="handleTimeUpdate" class="w-full h-full max-h-[340px] block object-contain transform group-hover:scale-[1.01] transition-transform duration-700 mx-auto" preload="metadata" playsinline controls>
 								<source :src="json.videoName" type="video/mp4">
 							</video>
 						</div>
@@ -86,7 +87,10 @@ import { ref, defineProps, onMounted, nextTick } from 'vue'
 const rootRef = ref(null)
 const isVisible = ref(false)
 const videoPlayer = ref(null)
+const commandListRef = ref(null)
+const buttonRefs = ref([])
 const activeIndex = ref(1)
+const isSeeking = ref(false)
 const code = ref('')
 const props = defineProps({
 	json: Object,
@@ -113,15 +117,35 @@ const getCode = () => {
 		code.value = data
 	});
 }
+const handleTimeUpdate = () => {
+	if (isSeeking.value) return
+	const currentTime = videoPlayer.value?.currentTime ?? 0
+	const options = props.json.options
+	// Find the option whose time is the largest value <= currentTime
+	let matched = options[0]
+	for (const opt of options) {
+		if (opt.time <= currentTime) matched = opt
+	}
+	if (matched && matched.key !== activeIndex.value) {
+		activeIndex.value = matched.key
+		getCode()
+		nextTick(() => {
+			const btn = buttonRefs.value[matched.key - 1]
+			btn?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+		})
+	}
+}
 const handleSelectChange = async (val) => {
 	const timePoint = props.json.options[val - 1].time
 	activeIndex.value = val
+	isSeeking.value = true
 	await nextTick()
 	if (videoPlayer.value) {
 		videoPlayer.value.currentTime = timePoint
 		videoPlayer.value.play()
 	}
 	getCode()
+	setTimeout(() => { isSeeking.value = false }, 800)
 }
 const loadTxtFile = (url, callback) => {
 	var xhr = new XMLHttpRequest();
